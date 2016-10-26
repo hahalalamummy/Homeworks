@@ -14,7 +14,7 @@ class ClassDataManager {
     
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "quan ly")
+        let container = NSPersistentContainer(name: "Homework")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 
