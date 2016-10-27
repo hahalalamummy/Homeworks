@@ -12,6 +12,15 @@ class StudentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var studentTableView: UITableView!
     
+//    @IBOutlet weak var picture: UIImageView!
+//    
+//    @IBOutlet weak var nameLabel: UILabel!
+//    
+//    @IBOutlet weak var birthdayLabel: UILabel!
+//    
+//    @IBOutlet weak var addressLabel: UILabel!
+    
+    
     var classIT: ClassesEntity!
     var students = [StudentsEntity]()
     
@@ -21,12 +30,17 @@ class StudentViewController: UIViewController, UITableViewDelegate, UITableViewD
         addNavigationBarButton()
         studentTableView.delegate = self
         studentTableView.dataSource = self
+        
+        title = "Student"
+        studentTableView.tableFooterView = UIView()
     }
     
     func addNavigationBarButton() {
         //        let buttonCreateStudent = UIBarButtonItem(image: UIImage(named: "addButton"), style: .plain, target: self, action: #selector(showViewCreateNewStudent))
         let buttonCreate = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        buttonCreate.setImage(UIImage(named: "addButton"), for: .normal)
+        //buttonCreate.setImage(UIImage(named: "addButton"), for: .normal)
+        buttonCreate.setTitle("Add", for: .normal)
+        buttonCreate.setTitleColor(UIColor.blue, for: .normal)
         buttonCreate.addTarget(self, action: #selector(showViewCreateNewStudent), for: .touchUpInside)
         let rightBarItem = UIBarButtonItem()
         rightBarItem.customView = buttonCreate
@@ -75,7 +89,7 @@ class StudentViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath)
+        let cell = studentTableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath)
         
         let student = students[indexPath.row]
         
@@ -84,8 +98,9 @@ class StudentViewController: UIViewController, UITableViewDelegate, UITableViewD
         let birthdayLable = cell.contentView.viewWithTag(102) as! UILabel
         let addressLable = cell.contentView.viewWithTag(103) as! UILabel
         
+        
         imageLable.image = UIImage(data: student.picture as! Data)
-        imageLable.contentMode = .scaleAspectFit
+        imageLable.clipsToBounds = true
         
         nameLable.text = student.name
         

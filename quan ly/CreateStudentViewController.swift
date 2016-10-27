@@ -50,6 +50,11 @@ class CreateStudentViewController: UIViewController, UITextFieldDelegate, UIImag
     
     //MARK: textField
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
@@ -74,9 +79,10 @@ class CreateStudentViewController: UIViewController, UITextFieldDelegate, UIImag
             }
         }
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let studentViewController = storyBoard.instantiateViewController(withIdentifier: "StudentViewController") as! StudentViewController
-        self.present(studentViewController, animated:true, completion:nil)
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let studentViewController = storyBoard.instantiateViewController(withIdentifier: "StudentViewController") as! StudentViewController
+//        self.present(studentViewController, animated:true, completion:nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

@@ -21,6 +21,11 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -37,9 +42,10 @@ class CreateClassViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.present(viewController, animated:true, completion:nil)
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//        self.present(viewController, animated:true, completion:nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

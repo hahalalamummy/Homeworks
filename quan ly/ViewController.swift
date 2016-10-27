@@ -24,6 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.classTableView.delegate = self
         self.classTableView.dataSource = self
         title = "Classes"
+        
+        classTableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,43 +50,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func addClassButton(_ sender: AnyObject) { // đi đến CreateClassViewController
         
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        
-//        let createClassViewController = storyBoard.instantiateViewController(withIdentifier: "CreateClassViewController") as! CreateClassViewController
-//        
-//        self.present(createClassViewController, animated:true, completion:nil)
-        if !isViewingCreatClassViewController {
-            
-            let blurView = UIView()
-            blurView.frame = self.view.frame
-            blurView.backgroundColor = UIColor.clear
-            self.view.addSubview(blurView)
-            blurView.tag = 101
-            
-            let createClassViewController = self.storyboard?.instantiateViewController(withIdentifier: "CreateClassViewController") as! CreateClassViewController
-            self.addChildViewController(createClassViewController)
-            //            createClassViewController.view.frame = CGRect(x: 20, y: 130, width: self.view.frame.width - 40, height: 300)
-            
-            createClassViewController.didMove(toParentViewController: self)
-            blurView.addSubview(createClassViewController.view)
-            
-            isViewingCreatClassViewController = true
-        } else {
-            if let createClassViewController = self.childViewControllers[0] as? CreateClassViewController {
-                createClassViewController.removeFromParentViewController()
-                createClassViewController.view.removeFromSuperview()
-                isViewingCreatClassViewController = false
-            }
-            for view in self.view.subviews {
-                if view.tag == 101 {
-                    //view.removeFromSuperview()
-                }
-            }
-            
-            self.loadData()
-            classTableView.reloadData()
-            
-        }
+        self.navigationController?.pushViewController(self.storyboard?.instantiateViewController(withIdentifier: "CreateClassViewController") as! CreateClassViewController, animated: true)
+        
     }
     
     //MARK: tableView

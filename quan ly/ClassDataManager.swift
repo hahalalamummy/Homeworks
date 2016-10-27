@@ -12,21 +12,21 @@ import CoreData
 class ClassDataManager {
     static let shared: ClassDataManager = ClassDataManager()
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        
-        let container = NSPersistentContainer(name: "Homework")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
+//    lazy var persistentContainer: NSPersistentContainer = {
+//        
+//        let container = NSPersistentContainer(name: "quan_ly")
+//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+//            if let error = error as NSError? {
+//                
+//                fatalError("Unresolved error \(error), \(error.userInfo)")
+//            }
+//        })
+//        return container
+//    }()
     
     func creatNewClass(name:String) {
         
-        let context = self.persistentContainer.viewContext
+        let context = DatabaseController.persistentContainer.viewContext
         
         let classIT = ClassesEntity(context: context)
         classIT.name = name
@@ -39,7 +39,7 @@ class ClassDataManager {
     }
     
     func deleteClass(classIT: ClassesEntity) {
-        let context = self.persistentContainer.viewContext
+        let context = DatabaseController.persistentContainer.viewContext
         context.delete(classIT)
         
         DatabaseController.saveContext()
@@ -48,7 +48,7 @@ class ClassDataManager {
     func listAllClasses() -> [ClassesEntity]? {
         
         
-        let context = self.persistentContainer.viewContext
+        let context = DatabaseController.persistentContainer.viewContext
         
         do {
             let fetchResults = try context.fetch(ClassesEntity.fetchRequest())

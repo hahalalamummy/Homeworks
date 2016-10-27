@@ -12,21 +12,21 @@ import CoreData
 class StudentDataManager {
     static let shared: StudentDataManager = StudentDataManager()
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        
-        let container = NSPersistentContainer(name: "Homework")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
+//    lazy var persistentContainer: NSPersistentContainer = {
+//        
+//        let container = NSPersistentContainer(name: "quan_ly")
+//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+//            if let error = error as NSError? {
+//                
+//                fatalError("Unresolved error \(error), \(error.userInfo)")
+//            }
+//        })
+//        return container
+//    }()
     
     func creatNewStudent(name:String, address:String, dateOfBirth:NSDate, picture:NSData, classes: ClassesEntity) {
         
-        let context = self.persistentContainer.viewContext
+        let context = DatabaseController.persistentContainer.viewContext
         let student = StudentsEntity(context: context)
         
         student.name = name
@@ -41,7 +41,7 @@ class StudentDataManager {
     }
     
     func deleteStudent(student: StudentsEntity) {
-        let context = self.persistentContainer.viewContext
+        let context = DatabaseController.persistentContainer.viewContext
         context.delete(student)
         
         DatabaseController.saveContext()
