@@ -3,21 +3,24 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "SearchResults.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:SearchResults.swift">
+         contextName = "ViewController.percent(AnyObject) -&gt; ():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath.row">
-            </PersistentString>
-            <PersistentString
-               value = "images.count">
+               value = "processing">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SearchResults.play(url : URL) -&gt; ():SearchResults.swift">
+         contextName = "ViewController.handling() -&gt; ():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "url">
+               value = "secondNumber">
+            </PersistentString>
+            <PersistentString
+               value = "firstNumber">
+            </PersistentString>
+            <PersistentString
+               value = "processing">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
