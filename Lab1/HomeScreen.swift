@@ -20,5 +20,13 @@ class HomeScreen: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func playButton(_ sender: AnyObject) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameScreen") as! GameScreen
+        navigationController?.pushViewController(vc, animated: true)
+        //self.present(vc, animated: true)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 }

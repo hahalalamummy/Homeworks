@@ -15,6 +15,8 @@
 		84046B0E1DDDF4CC00E09011 /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84046B0C1DDDF4CC00E09011 /* PoplarStd.otf */; };
 		84046B0F1DDDF4CC00E09011 /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84046B0D1DDDF4CC00E09011 /* StencilStd.otf */; };
 		84222EBA1DDEAE8300C3AE42 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84222EB91DDEAE8300C3AE42 /* HomeScreen.swift */; };
+		84222EBD1DDEAF5B00C3AE42 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84222EBC1DDEAF5B00C3AE42 /* GameScreen.swift */; };
+		84B986331DDEFF630019D197 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B986321DDEFF630019D197 /* CircleProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		84046B0C1DDDF4CC00E09011 /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
 		84046B0D1DDDF4CC00E09011 /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
 		84222EB91DDEAE8300C3AE42 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		84222EBC1DDEAF5B00C3AE42 /* GameScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		84B986321DDEFF630019D197 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		84046AF81DDDE96E00E09011 /* Lab1 */ = {
 			isa = PBXGroup;
 			children = (
+				84B986321DDEFF630019D197 /* CircleProgressView.swift */,
 				84222EBB1DDEAE8800C3AE42 /* Screen */,
 				84046AF91DDDE96E00E09011 /* AppDelegate.swift */,
 				84046AFB1DDDE96E00E09011 /* ViewController.swift */,
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				84222EB91DDEAE8300C3AE42 /* HomeScreen.swift */,
+				84222EBC1DDEAF5B00C3AE42 /* GameScreen.swift */,
 			);
 			name = Screen;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84046AFC1DDDE96E00E09011 /* ViewController.swift in Sources */,
+				84222EBD1DDEAF5B00C3AE42 /* GameScreen.swift in Sources */,
+				84B986331DDEFF630019D197 /* CircleProgressView.swift in Sources */,
 				84046AFA1DDDE96E00E09011 /* AppDelegate.swift in Sources */,
 				84222EBA1DDEAE8300C3AE42 /* HomeScreen.swift in Sources */,
 			);
