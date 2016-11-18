@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeScreen" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -131,18 +131,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GCA_0.0.1_3.Card_Scene_Result" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-C9-mLX">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GCA_0.0.1_3.Card_Scene_Result" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-C9-mLX">
                                 <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dup-hx-oPx"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RU0-qg-OKw">
-                                <frame key="frameInset" minX="119" minY="96" width="137" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qU-iT-2Fo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
@@ -159,9 +152,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RU0-qg-OKw">
+                                <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85409816497079472" blue="0.24893639545642976" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="RU0-qg-OKw" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="0.368" id="2Aa-6X-ecP"/>
                             <constraint firstItem="zyd-aR-C0P" firstAttribute="width" secondItem="9qU-iT-2Fo" secondAttribute="width" id="3iM-tF-WeX"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="0.85" id="4Tx-yX-PBg"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" id="5E4-G2-dIf"/>
@@ -175,6 +174,7 @@
                             <constraint firstItem="9qU-iT-2Fo" firstAttribute="height" secondItem="MdF-xD-1wG" secondAttribute="height" multiplier="47/667" id="SNs-MS-pbA"/>
                             <constraint firstItem="GXL-Iz-UlQ" firstAttribute="width" secondItem="9qU-iT-2Fo" secondAttribute="width" id="W2R-FX-i4y"/>
                             <constraint firstItem="GXL-Iz-UlQ" firstAttribute="height" secondItem="9qU-iT-2Fo" secondAttribute="height" id="ceu-K8-qqz"/>
+                            <constraint firstItem="RU0-qg-OKw" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" id="dd6-Pa-Iv7"/>
                             <constraint firstItem="9qU-iT-2Fo" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="1.48" id="ezq-ec-Hge"/>
                             <constraint firstItem="9qU-iT-2Fo" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" multiplier="0.5" id="giP-Fq-oDW"/>
                             <constraint firstItem="coX-hu-aE3" firstAttribute="height" secondItem="9qU-iT-2Fo" secondAttribute="height" id="k4S-8b-UtT"/>
