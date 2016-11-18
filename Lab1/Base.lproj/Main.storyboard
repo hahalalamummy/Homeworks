@@ -143,38 +143,46 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qU-iT-2Fo">
-                                <frame key="frameInset" minX="16" minY="470" width="157" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qU-iT-2Fo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coX-hu-aE3">
-                                <frame key="frameInset" minX="202" minY="470" width="157" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coX-hu-aE3">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyd-aR-C0P">
-                                <frame key="frameInset" minX="16" minY="534" width="157" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyd-aR-C0P">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-Iz-UlQ">
-                                <frame key="frameInset" minX="202" minY="534" width="157" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXL-Iz-UlQ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85409816497079472" blue="0.24893639545642976" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="zyd-aR-C0P" firstAttribute="width" secondItem="9qU-iT-2Fo" secondAttribute="width" id="3iM-tF-WeX"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="0.85" id="4Tx-yX-PBg"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" id="5E4-G2-dIf"/>
+                            <constraint firstItem="zyd-aR-C0P" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="1.67" id="9y5-RF-ezP"/>
+                            <constraint firstItem="zyd-aR-C0P" firstAttribute="height" secondItem="9qU-iT-2Fo" secondAttribute="height" id="CSg-sq-LKu"/>
+                            <constraint firstItem="coX-hu-aE3" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="1.48" id="En8-Au-YAA"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="trailing" secondItem="MdF-xD-1wG" secondAttribute="trailingMargin" id="FQ8-LN-2Uc"/>
+                            <constraint firstItem="9qU-iT-2Fo" firstAttribute="width" secondItem="MdF-xD-1wG" secondAttribute="width" multiplier="157/375" id="FY2-Im-c2u"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="height" secondItem="MdF-xD-1wG" secondAttribute="height" multiplier="222/667" id="GPZ-YR-Q0V"/>
+                            <constraint firstItem="coX-hu-aE3" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" multiplier="1.5" id="JaI-5K-N21"/>
+                            <constraint firstItem="9qU-iT-2Fo" firstAttribute="height" secondItem="MdF-xD-1wG" secondAttribute="height" multiplier="47/667" id="SNs-MS-pbA"/>
+                            <constraint firstItem="GXL-Iz-UlQ" firstAttribute="width" secondItem="9qU-iT-2Fo" secondAttribute="width" id="W2R-FX-i4y"/>
+                            <constraint firstItem="GXL-Iz-UlQ" firstAttribute="height" secondItem="9qU-iT-2Fo" secondAttribute="height" id="ceu-K8-qqz"/>
+                            <constraint firstItem="9qU-iT-2Fo" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="1.48" id="ezq-ec-Hge"/>
+                            <constraint firstItem="9qU-iT-2Fo" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" multiplier="0.5" id="giP-Fq-oDW"/>
+                            <constraint firstItem="coX-hu-aE3" firstAttribute="height" secondItem="9qU-iT-2Fo" secondAttribute="height" id="k4S-8b-UtT"/>
+                            <constraint firstItem="zyd-aR-C0P" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" multiplier="0.5" id="kgF-qE-uvB"/>
+                            <constraint firstItem="GXL-Iz-UlQ" firstAttribute="centerY" secondItem="MdF-xD-1wG" secondAttribute="centerY" multiplier="1.67" id="sZi-A1-csV"/>
+                            <constraint firstItem="coX-hu-aE3" firstAttribute="width" secondItem="9qU-iT-2Fo" secondAttribute="width" id="uiB-JA-7tQ"/>
                             <constraint firstItem="dup-hx-oPx" firstAttribute="leading" secondItem="MdF-xD-1wG" secondAttribute="leadingMargin" id="vxL-LJ-dy4"/>
+                            <constraint firstItem="GXL-Iz-UlQ" firstAttribute="centerX" secondItem="MdF-xD-1wG" secondAttribute="centerX" multiplier="1.5" id="zh2-tz-9id"/>
                         </constraints>
                     </view>
                 </viewController>
