@@ -22,6 +22,7 @@ class GameScreen: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = self.pokemonImage.tintColor
         self.circleProgressView.progress = 0
+        self.circleProgressView.trackBackgroundColor = UIColor(white: 1, alpha: 0.5)
         self.pokemonImage.image = self.pokemonImage.image?.withRenderingMode(.alwaysTemplate)
         self.pokemonImage.tintColor = UIColor.black
         self.pokemonImage.layer.cornerRadius = 10
@@ -57,10 +58,10 @@ class GameScreen: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         circleProgressView.setTrackWidth(width: circleProgressView.frame.size.width/2)
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
     func timerAction() {
-        self.circleProgressView.progress+=0.1
+        self.circleProgressView.progress+=0.001
     }
 }
 
@@ -92,5 +93,24 @@ extension UIView {
         set {
             layer.borderColor = newValue?.cgColor
         }
+    }
+}
+
+extension UIColor {
+    
+    var redValue: CGFloat{
+        return cgColor.components! [0]
+    }
+    
+    var greenValue: CGFloat{
+        return cgColor.components! [1]
+    }
+    
+    var blueValue: CGFloat{
+        return cgColor.components! [2]
+    }
+    
+    var alphaValue: CGFloat{
+        return cgColor.components! [3]
     }
 }

@@ -59,12 +59,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHSCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-ge-tEr">
-                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-mY-RuZ">
-                                        <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="80"/>
+                                        <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="70"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -253,13 +253,13 @@
                                         <real key="value" value="20.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="trackImage" value="white"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#142 Aerodactyl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPH-AC-fKI">
-                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -310,11 +310,175 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
         </scene>
+        <!--Setting Screen-->
+        <scene sceneID="1ee-1r-Mi5">
+            <objects>
+                <viewController id="Hdx-1c-Ttw" customClass="SettingScreen" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oPH-bF-3k7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZgM-sZ-B82"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CA5-7Y-344">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GCA_0.0.1_6.Settings_Scene" translatesAutoresizingMaskIntoConstraints="NO" id="sbf-gd-YTx">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xu6-Pf-MfV">
+                                <frame key="frameInset" minX="16" minY="302" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Background_Gen1@2x.png"/>
+                                <connections>
+                                    <action selector="generationButton:" destination="Hdx-1c-Ttw" eventType="touchUpInside" id="2Oo-JX-kMA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4d-UK-yBH">
+                                <frame key="frameInset" minX="21" minY="310" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1m-Qr-Qbi">
+                                <frame key="frameInset" minX="191" minY="302" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Background_Gen2@2x.png"/>
+                                <connections>
+                                    <action selector="generationButton:" destination="Hdx-1c-Ttw" eventType="touchUpInside" id="wdw-FJ-tOC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION II" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-dP-p4I">
+                                <frame key="frameInset" minX="202" minY="310" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRh-oV-yLM">
+                                <frame key="frameInset" minX="16" minY="387" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Background_Gen3@2x.png"/>
+                                <connections>
+                                    <action selector="generationButton:" destination="Hdx-1c-Ttw" eventType="touchUpInside" id="hGe-QF-vWQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION III" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-OV-oks">
+                                <frame key="frameInset" minX="21" minY="395" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-v0-FS9">
+                                <frame key="frameInset" minX="192" minY="387" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Background_Gen4@2x.png"/>
+                                <connections>
+                                    <action selector="generationButton:" destination="Hdx-1c-Ttw" eventType="touchUpInside" id="cBF-Vy-fvc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION IV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZh-rT-vez">
+                                <frame key="frameInset" minX="202" minY="395" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgc-jn-76Y">
+                                <frame key="frameInset" minX="16" minY="472" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Background_Gen5@2x.png"/>
+                                <connections>
+                                    <action selector="generationButton:" destination="Hdx-1c-Ttw" eventType="touchUpInside" id="GGg-uF-0rY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzo-tu-faw">
+                                <frame key="frameInset" minX="21" minY="479" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="737-Pa-qga">
+                                <frame key="frameInset" minX="191" minY="472" width="167" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Background_Gen6@2x.png"/>
+                                <connections>
+                                    <action selector="generationButton:" destination="Hdx-1c-Ttw" eventType="touchUpInside" id="xpQ-Jz-49l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION VI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA9-Tn-Gs3">
+                                <frame key="frameInset" minX="202" minY="479" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATIONS IN QUIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kix-1B-oGq">
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iT0-9N-5EA">
+                                <color key="onTintColor" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hxk-Hc-QM8">
+                                <color key="onTintColor" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp4-iS-xWF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNA-aq-Mnz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC8-Hh-JL9">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yNA-aq-Mnz" firstAttribute="centerY" secondItem="CA5-7Y-344" secondAttribute="centerY" multiplier="0.32" id="5H2-fc-kS4"/>
+                            <constraint firstItem="UC8-Hh-JL9" firstAttribute="leading" secondItem="CA5-7Y-344" secondAttribute="leading" id="6Su-De-wkc"/>
+                            <constraint firstItem="iT0-9N-5EA" firstAttribute="centerX" secondItem="CA5-7Y-344" secondAttribute="centerX" multiplier="1.78" id="8nc-I5-DgB"/>
+                            <constraint firstItem="UC8-Hh-JL9" firstAttribute="centerY" secondItem="CA5-7Y-344" secondAttribute="centerY" multiplier="0.12" id="AB7-b1-mPw"/>
+                            <constraint firstItem="kix-1B-oGq" firstAttribute="centerX" secondItem="CA5-7Y-344" secondAttribute="centerX" id="Chn-s2-2C0"/>
+                            <constraint firstItem="iT0-9N-5EA" firstAttribute="centerY" secondItem="CA5-7Y-344" secondAttribute="centerY" multiplier="0.45" id="MhQ-0V-3t4"/>
+                            <constraint firstItem="lp4-iS-xWF" firstAttribute="centerY" secondItem="CA5-7Y-344" secondAttribute="centerY" multiplier="0.45" id="OCD-c0-KxZ"/>
+                            <constraint firstItem="Hxk-Hc-QM8" firstAttribute="centerY" secondItem="CA5-7Y-344" secondAttribute="centerY" multiplier="0.32" id="YI9-d4-gG8"/>
+                            <constraint firstItem="kix-1B-oGq" firstAttribute="centerY" secondItem="CA5-7Y-344" secondAttribute="centerY" multiplier="0.74" id="asq-K6-Jw7"/>
+                            <constraint firstItem="lp4-iS-xWF" firstAttribute="centerX" secondItem="CA5-7Y-344" secondAttribute="centerX" multiplier="0.21" id="eJk-LD-Xhc"/>
+                            <constraint firstItem="yNA-aq-Mnz" firstAttribute="centerX" secondItem="CA5-7Y-344" secondAttribute="centerX" multiplier="0.35" id="fGz-WP-h6E"/>
+                            <constraint firstItem="Hxk-Hc-QM8" firstAttribute="centerX" secondItem="CA5-7Y-344" secondAttribute="centerX" multiplier="1.78" id="fwS-Fk-HCq"/>
+                            <constraint firstItem="UC8-Hh-JL9" firstAttribute="centerX" secondItem="CA5-7Y-344" secondAttribute="centerX" multiplier="0.08" id="qtr-wa-x91"/>
+                            <constraint firstItem="UC8-Hh-JL9" firstAttribute="top" secondItem="oPH-bF-3k7" secondAttribute="bottom" constant="8" id="wSM-aA-3pn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvN-6v-Jef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877.5999999999999" y="122.78860569715144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Aerodactyl" width="250" height="250"/>
+        <image name="Background_Gen1@2x.png" width="347" height="153"/>
+        <image name="Background_Gen2@2x.png" width="347" height="153"/>
+        <image name="Background_Gen3@2x.png" width="347" height="153"/>
+        <image name="Background_Gen4@2x.png" width="347" height="153"/>
+        <image name="Background_Gen5@2x.png" width="347" height="153"/>
+        <image name="Background_Gen6@2x.png" width="347" height="153"/>
         <image name="Button_Play" width="459" height="458"/>
         <image name="GCA_0.0.1_3.Card_Scene_Result" width="750" height="1334"/>
+        <image name="GCA_0.0.1_6.Settings_Scene" width="750" height="1334"/>
         <image name="Icon_Settings" width="354" height="354"/>
         <image name="white" width="800" height="800"/>
     </resources>
