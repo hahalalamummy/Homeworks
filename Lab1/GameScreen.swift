@@ -9,9 +9,15 @@
 import UIKit
 
 class GameScreen: UIViewController {
+    
     @IBOutlet weak var circleProgressView: CircleProgressView!
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var pokemonInformation: UILabel!
+    
+    var pokemon: [ModelPokemon] = []
+    
+    var pickingPokemon:Int = 0
+    var pickingAnswerButton:Int = 0
     
     var timer = Timer()
     var rightAnswer = 100
@@ -20,6 +26,7 @@ class GameScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         self.view.backgroundColor = self.pokemonImage.tintColor
         self.circleProgressView.progress = 0
         self.circleProgressView.trackBackgroundColor = UIColor(white: 1, alpha: 0.5)
@@ -27,11 +34,33 @@ class GameScreen: UIViewController {
         self.pokemonImage.tintColor = UIColor.black
         self.pokemonImage.layer.cornerRadius = 10
         self.pokemonInformation.alpha = 0
+        pokemon = DataManager.shared.listAllPokemon()
+        setUp()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setUp() {
+        pickingPokemon = Int(arc4random_uniform(747) + 1)
+        while pokemon[pickingPokemon].gen != 1 {
+            pickingPokemon = Int(arc4random_uniform(747) + 1)
+        }
+        
+        pickingAnswerButton = Int(arc4random_uniform(4) + 100)
+        
+        
+        
+        var button = self.view.viewWithTag(pickingAnswerButton) as! UIButton
+        button.setTitle(pokemon[pickingPokemon].name, for: .normal)
+        
+        for i in 100...103 {
+            button = self.view.viewWithTag(i) as! UIButton
+            if i != pickingAnswerButton {
+                var pickingWrongAnswer = Int(arc4random_uniform(747) + 1)
+                while pokemon[pickingWrongAnswer].gen != 1 && pickingWrongAnswer != pickingPokemon {
+                    pickingWrongAnswer = Int(arc4random_uniform(747) + 1)
+                }
+                button.setTitle(pokemon[pickingWrongAnswer].name, for: .normal)
+            }
+        }
     }
     
     @IBAction func pushBackButton(_ sender: AnyObject) {

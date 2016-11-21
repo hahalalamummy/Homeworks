@@ -25,6 +25,11 @@ class HomeScreen: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         //self.present(vc, animated: true)
     }
+    
+    @IBAction func settingButton(_ sender: AnyObject) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingScreen") as! SettingScreen
+        navigationController?.pushViewController(vc, animated: true)
+    }
     override func viewWillAppear(_ animated: Bool) {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: true)

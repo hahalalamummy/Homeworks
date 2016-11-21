@@ -757,8 +757,19 @@
 		8417A9531DE18C9200B993C8 /* Zubat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8417A66D1DE18C9200B993C8 /* Zubat.png */; };
 		8417A9541DE18C9200B993C8 /* Zweilous.png in Resources */ = {isa = PBXBuildFile; fileRef = 8417A66E1DE18C9200B993C8 /* Zweilous.png */; };
 		8417A9551DE18C9200B993C8 /* Zygarde.png in Resources */ = {isa = PBXBuildFile; fileRef = 8417A66F1DE18C9200B993C8 /* Zygarde.png */; };
+		8417A96D1DE19C5A00B993C8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8417A96C1DE19C5A00B993C8 /* libsqlite3.0.tbd */; };
+		8417A96F1DE19C6100B993C8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8417A96E1DE19C6100B993C8 /* libsqlite3.tbd */; };
+		8417A9761DE1A15600B993C8 /* pokemon.db in Resources */ = {isa = PBXBuildFile; fileRef = 8417A9751DE1A15600B993C8 /* pokemon.db */; };
 		84222EBA1DDEAE8300C3AE42 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84222EB91DDEAE8300C3AE42 /* HomeScreen.swift */; };
 		84222EBD1DDEAF5B00C3AE42 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84222EBC1DDEAF5B00C3AE42 /* GameScreen.swift */; };
+		8491A2911DE1A31100D055FE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491A2861DE1A31100D055FE /* FMDatabase.m */; };
+		8491A2921DE1A31100D055FE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491A2881DE1A31100D055FE /* FMDatabaseAdditions.m */; };
+		8491A2931DE1A31100D055FE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491A28A1DE1A31100D055FE /* FMDatabasePool.m */; };
+		8491A2941DE1A31100D055FE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491A28C1DE1A31100D055FE /* FMDatabaseQueue.m */; };
+		8491A2951DE1A31100D055FE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491A28F1DE1A31100D055FE /* FMResultSet.m */; };
+		8491A2961DE1A31100D055FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8491A2901DE1A31100D055FE /* Info.plist */; };
+		8491A29C1DE1A55500D055FE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491A29B1DE1A55500D055FE /* DataManager.swift */; };
+		8491A29E1DE1A67900D055FE /* ModelPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491A29D1DE1A67900D055FE /* ModelPokemon.swift */; };
 		84B986331DDEFF630019D197 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B986321DDEFF630019D197 /* CircleProgressView.swift */; };
 /* End PBXBuildFile section */
 
@@ -1515,8 +1526,26 @@
 		8417A66D1DE18C9200B993C8 /* Zubat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zubat.png; sourceTree = "<group>"; };
 		8417A66E1DE18C9200B993C8 /* Zweilous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zweilous.png; sourceTree = "<group>"; };
 		8417A66F1DE18C9200B993C8 /* Zygarde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zygarde.png; sourceTree = "<group>"; };
+		8417A96C1DE19C5A00B993C8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8417A96E1DE19C6100B993C8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8417A9751DE1A15600B993C8 /* pokemon.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.db; sourceTree = "<group>"; };
 		84222EB91DDEAE8300C3AE42 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		84222EBC1DDEAF5B00C3AE42 /* GameScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		8491A2811DE1A2CA00D055FE /* Lab1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lab1-Bridging-Header.h"; sourceTree = "<group>"; };
+		8491A2851DE1A31100D055FE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		8491A2861DE1A31100D055FE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		8491A2871DE1A31100D055FE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		8491A2881DE1A31100D055FE /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		8491A2891DE1A31100D055FE /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		8491A28A1DE1A31100D055FE /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		8491A28B1DE1A31100D055FE /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		8491A28C1DE1A31100D055FE /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8491A28D1DE1A31100D055FE /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		8491A28E1DE1A31100D055FE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		8491A28F1DE1A31100D055FE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		8491A2901DE1A31100D055FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8491A29B1DE1A55500D055FE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8491A29D1DE1A67900D055FE /* ModelPokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPokemon.swift; sourceTree = "<group>"; };
 		84B986321DDEFF630019D197 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1525,6 +1554,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8417A96F1DE19C6100B993C8 /* libsqlite3.tbd in Frameworks */,
+				8417A96D1DE19C5A00B993C8 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1536,6 +1567,7 @@
 			children = (
 				84046AF81DDDE96E00E09011 /* Lab1 */,
 				84046AF71DDDE96E00E09011 /* Products */,
+				8417A96B1DE19C5A00B993C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1550,6 +1582,7 @@
 		84046AF81DDDE96E00E09011 /* Lab1 */ = {
 			isa = PBXGroup;
 			children = (
+				8417A9721DE1A0E600B993C8 /* DataHolder */,
 				8417A3891DE18C8E00B993C8 /* images */,
 				84B986321DDEFF630019D197 /* CircleProgressView.swift */,
 				84222EBB1DDEAE8800C3AE42 /* Screen */,
@@ -1560,6 +1593,7 @@
 				84046B021DDDE96E00E09011 /* LaunchScreen.storyboard */,
 				84046B051DDDE96E00E09011 /* Info.plist */,
 				84046B0B1DDDF4CC00E09011 /* Fonts */,
+				8491A2811DE1A2CA00D055FE /* Lab1-Bridging-Header.h */,
 			);
 			path = Lab1;
 			sourceTree = "<group>";
@@ -2322,6 +2356,26 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		8417A96B1DE19C5A00B993C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8417A96E1DE19C6100B993C8 /* libsqlite3.tbd */,
+				8417A96C1DE19C5A00B993C8 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8417A9721DE1A0E600B993C8 /* DataHolder */ = {
+			isa = PBXGroup;
+			children = (
+				8491A2841DE1A31100D055FE /* fmdb */,
+				8417A9751DE1A15600B993C8 /* pokemon.db */,
+				8491A29B1DE1A55500D055FE /* DataManager.swift */,
+				8491A29D1DE1A67900D055FE /* ModelPokemon.swift */,
+			);
+			name = DataHolder;
+			sourceTree = "<group>";
+		};
 		84222EBB1DDEAE8800C3AE42 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -2330,6 +2384,25 @@
 				8417A3861DE18A5600B993C8 /* SettingScreen.swift */,
 			);
 			name = Screen;
+			sourceTree = "<group>";
+		};
+		8491A2841DE1A31100D055FE /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				8491A2851DE1A31100D055FE /* FMDatabase.h */,
+				8491A2861DE1A31100D055FE /* FMDatabase.m */,
+				8491A2871DE1A31100D055FE /* FMDatabaseAdditions.h */,
+				8491A2881DE1A31100D055FE /* FMDatabaseAdditions.m */,
+				8491A2891DE1A31100D055FE /* FMDatabasePool.h */,
+				8491A28A1DE1A31100D055FE /* FMDatabasePool.m */,
+				8491A28B1DE1A31100D055FE /* FMDatabaseQueue.h */,
+				8491A28C1DE1A31100D055FE /* FMDatabaseQueue.m */,
+				8491A28D1DE1A31100D055FE /* FMDB.h */,
+				8491A28E1DE1A31100D055FE /* FMResultSet.h */,
+				8491A28F1DE1A31100D055FE /* FMResultSet.m */,
+				8491A2901DE1A31100D055FE /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2365,6 +2438,7 @@
 					84046AF51DDDE96E00E09011 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XFWQD4U797;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2778,6 +2852,7 @@
 				8417A8291DE18C9200B993C8 /* Noivern.png in Resources */,
 				8417A9121DE18C9200B993C8 /* Tyrogue.png in Resources */,
 				8417A68F1DE18C9200B993C8 /* Azumarill.png in Resources */,
+				8417A9761DE1A15600B993C8 /* pokemon.db in Resources */,
 				8417A7E41DE18C9200B993C8 /* Magcargo.png in Resources */,
 				8417A6E41DE18C9200B993C8 /* Cottonee.png in Resources */,
 				8417A94D1DE18C9200B993C8 /* Zapdos.png in Resources */,
@@ -2894,6 +2969,7 @@
 				8417A6B31DE18C9200B993C8 /* Buizel.png in Resources */,
 				8417A9201DE18C9200B993C8 /* Venusaur.png in Resources */,
 				8417A8DA1DE18C9200B993C8 /* Steelix.png in Resources */,
+				8491A2961DE1A31100D055FE /* Info.plist in Resources */,
 				8417A8BC1DE18C9200B993C8 /* Slowking.png in Resources */,
 				8417A7101DE18C9200B993C8 /* Drowzee.png in Resources */,
 				8417A73D1DE18C9200B993C8 /* Fletchling.png in Resources */,
@@ -3150,11 +3226,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8417A3871DE18A5600B993C8 /* SettingScreen.swift in Sources */,
+				8491A29C1DE1A55500D055FE /* DataManager.swift in Sources */,
 				84046AFC1DDDE96E00E09011 /* ViewController.swift in Sources */,
 				84222EBD1DDEAF5B00C3AE42 /* GameScreen.swift in Sources */,
 				84B986331DDEFF630019D197 /* CircleProgressView.swift in Sources */,
+				8491A2921DE1A31100D055FE /* FMDatabaseAdditions.m in Sources */,
+				8491A2951DE1A31100D055FE /* FMResultSet.m in Sources */,
+				8491A29E1DE1A67900D055FE /* ModelPokemon.swift in Sources */,
 				84046AFA1DDDE96E00E09011 /* AppDelegate.swift in Sources */,
+				8491A2931DE1A31100D055FE /* FMDatabasePool.m in Sources */,
+				8491A2941DE1A31100D055FE /* FMDatabaseQueue.m in Sources */,
 				84222EBA1DDEAE8300C3AE42 /* HomeScreen.swift in Sources */,
+				8491A2911DE1A31100D055FE /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3277,12 +3360,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XFWQD4U797;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = linh.Lab1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lab1/Lab1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -3291,12 +3377,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XFWQD4U797;
 				INFOPLIST_FILE = Lab1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = linh.Lab1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lab1/Lab1-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
