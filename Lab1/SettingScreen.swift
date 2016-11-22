@@ -9,10 +9,14 @@
 import UIKit
 
 class SettingScreen: UIViewController {
+    @IBOutlet weak var soundEffectSwitch: UISwitch!
+    @IBOutlet weak var musicSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        soundEffectSwitch.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        musicSwitch.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
     }
     
     override func didReceiveMemoryWarning() {
@@ -21,6 +25,18 @@ class SettingScreen: UIViewController {
     }
     
     @IBAction func generationButton(_ sender: AnyObject) {
+        var count = 0
+        
+        for i in generation {
+            if i == true {
+                count += 1
+            }
+        }
+        
+        if count == 2 && generation[sender.tag-99] == true {
+            return
+        }
+        
         let button = self.view.viewWithTag(sender.tag) as! UIButton
         
         if generation[sender.tag-99] == true {
@@ -32,4 +48,7 @@ class SettingScreen: UIViewController {
         }
     }
     
+    @IBAction func backToHome(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

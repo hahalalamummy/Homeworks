@@ -109,10 +109,12 @@ class GameScreen: UIViewController {
     
     func nextPokemon() {
         pickNew()
-        
+        self.view.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
-            self.view.slideInFromLeft()
+            //self.view.slideInFromLeft()
+            self.pokemonImage.slideInFromLeft()
+            self.view.isUserInteractionEnabled = true
             self.setUp()
         }
     }
