@@ -61,7 +61,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHSCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-ge-tEr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHSCORE: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-ge-tEr">
                                         <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -134,6 +134,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qxt-g1-n0R"/>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="2Vh-ge-tEr" id="NB7-tT-jev"/>
+                        <outlet property="scoreLabel" destination="xUW-mY-RuZ" id="8mn-eJ-Ik5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,6 +311,7 @@
                         <outlet property="circleProgressView" destination="6kM-v6-p3W" id="GRe-Zp-7hy"/>
                         <outlet property="pokemonImage" destination="dup-hx-oPx" id="uNH-ix-HTm"/>
                         <outlet property="pokemonInformation" destination="JPH-AC-fKI" id="2eM-Y8-7oz"/>
+                        <outlet property="score" destination="RU0-qg-OKw" id="2nc-kb-yp3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TB-k9-9Xv" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,39 +13,55 @@ class GameScreen: UIViewController {
     @IBOutlet weak var circleProgressView: CircleProgressView!
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var pokemonInformation: UILabel!
+    @IBOutlet weak var score: UILabel!
     
     var pokemon: [ModelPokemon] = []
+    var selectedPokemon = Array(repeating: true, count: 747)
     
     var pickingPokemon:Int = 0
     var pickingAnswerButton:Int = 0
     
     var timer = Timer()
-    var rightAnswer = 100
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.view.backgroundColor = self.pokemonImage.tintColor
+        scoreValue=0
         self.circleProgressView.progress = 0
         self.circleProgressView.trackBackgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.pokemonImage.image = self.pokemonImage.image?.withRenderingMode(.alwaysTemplate)
-        self.pokemonImage.tintColor = UIColor.black
-        self.pokemonImage.layer.cornerRadius = 10
-        self.pokemonInformation.alpha = 0
         pokemon = DataManager.shared.listAllPokemon()
+        self.pokemonImage.layer.cornerRadius = 10
+        score.text=String(scoreValue)
+        
+        pickNew()
         setUp()
     }
     
-    func setUp() {
-        pickingPokemon = Int(arc4random_uniform(747) + 1)
-        while pokemon[pickingPokemon].gen != 1 {
-            pickingPokemon = Int(arc4random_uniform(747) + 1)
+    func pickNew() {
+        pickingPokemon = Int(arc4random_uniform(747))
+        while generation[Int(pokemon[pickingPokemon].gen)] == false &&
+            selectedPokemon[Int(pokemon[pickingPokemon].id) - 1] == false
+        {
+            pickingPokemon = Int(arc4random_uniform(747))
         }
-        
+        selectedPokemon[Int(pokemon[pickingPokemon].id) - 1] = false
         pickingAnswerButton = Int(arc4random_uniform(4) + 100)
+    }
+    
+    func setUp() {
         
+        
+        self.pokemonImage.image = UIImage(named: pokemon[pickingPokemon].img)
+        self.view.backgroundColor = UIColor().HexToColor(hexString: pokemon[pickingPokemon].color)
+        self.pokemonImage.image = self.pokemonImage.image?.withRenderingMode(.alwaysTemplate)
+        self.pokemonImage.tintColor = UIColor.black
+        
+        self.pokemonInformation.alpha = 0
+        
+        for i in 100...103 {
+            let button = self.view.viewWithTag(i) as! UIButton
+            button.backgroundColor = UIColor.white
+        }
         
         
         var button = self.view.viewWithTag(pickingAnswerButton) as! UIButton
@@ -54,9 +70,9 @@ class GameScreen: UIViewController {
         for i in 100...103 {
             button = self.view.viewWithTag(i) as! UIButton
             if i != pickingAnswerButton {
-                var pickingWrongAnswer = Int(arc4random_uniform(747) + 1)
+                var pickingWrongAnswer = Int(arc4random_uniform(747))
                 while pokemon[pickingWrongAnswer].gen != 1 && pickingWrongAnswer != pickingPokemon {
-                    pickingWrongAnswer = Int(arc4random_uniform(747) + 1)
+                    pickingWrongAnswer = Int(arc4random_uniform(747))
                 }
                 button.setTitle(pokemon[pickingWrongAnswer].name, for: .normal)
             }
@@ -64,25 +80,42 @@ class GameScreen: UIViewController {
     }
     
     @IBAction func pushBackButton(_ sender: AnyObject) {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func answerButton(_ sender: AnyObject) {
-        if sender.tag == rightAnswer {
+        pokemonInformation.text = String(pokemon[pickingPokemon].tag + " " + pokemon[pickingPokemon].name)
+        
+        if sender.tag == pickingAnswerButton {
             let button = self.view.viewWithTag(sender.tag) as! UIButton
             button.backgroundColor = UIColor.green
+            scoreValue += 1
+            score.text=String(scoreValue)
         }
         else {
-            let rightButton = self.view.viewWithTag(rightAnswer) as! UIButton
+            let rightButton = self.view.viewWithTag(pickingAnswerButton) as! UIButton
             let wrongButton = self.view.viewWithTag(sender.tag) as! UIButton
             rightButton.backgroundColor = UIColor.green
             wrongButton.backgroundColor = UIColor.red
         }
         self.pokemonImage.image = self.pokemonImage.image?.withRenderingMode(.alwaysOriginal)
-        timer.invalidate()
         pokemonInformation.alpha = 1
+        
+        
+        timer.invalidate()
+        nextPokemon()
+        
     }
     
+    func nextPokemon() {
+        pickNew()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
+            self.view.slideInFromLeft()
+            self.setUp()
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -91,55 +124,12 @@ class GameScreen: UIViewController {
     }
     func timerAction() {
         self.circleProgressView.progress+=0.001
-    }
-}
-
-extension UIView {
-    
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-            layer.masksToBounds = newValue > 0
-        }
-    }
-    
-    @IBInspectable var borderWidth: CGFloat {
-        get {
-            return layer.borderWidth
-        }
-        set {
-            layer.borderWidth = newValue
-        }
-    }
-    
-    @IBInspectable var borderColor: UIColor? {
-        get {
-            return UIColor(cgColor: layer.borderColor!)
-        }
-        set {
-            layer.borderColor = newValue?.cgColor
+        if self.circleProgressView.progress >= 0.998 {
+            timer.invalidate()
+            
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }
 
-extension UIColor {
-    
-    var redValue: CGFloat{
-        return cgColor.components! [0]
-    }
-    
-    var greenValue: CGFloat{
-        return cgColor.components! [1]
-    }
-    
-    var blueValue: CGFloat{
-        return cgColor.components! [2]
-    }
-    
-    var alphaValue: CGFloat{
-        return cgColor.components! [3]
-    }
-}
+

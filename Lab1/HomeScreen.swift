@@ -9,10 +9,13 @@
 import UIKit
 
 class HomeScreen: UIViewController {
+    @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,5 +36,13 @@ class HomeScreen: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        if scoreValue > highScore {
+            highScore = scoreValue
+            highScoreLabel.text = "NEW HIGHSCORE"
+            scoreLabel.text = String(highScore)
+        } else {
+            highScoreLabel.text = "HIGHSCORE: "+String(highScore)
+            scoreLabel.text = String(scoreValue)
+        }
     }
 }

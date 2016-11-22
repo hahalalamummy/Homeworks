@@ -3,6 +3,45 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "GameScreen.setUp() -&gt; ():GameScreen.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pokemon.first">
+            </PersistentString>
+            <PersistentString
+               value = "pokemon.count">
+            </PersistentString>
+            <PersistentString
+               value = "pickingPokemon">
+            </PersistentString>
+            <PersistentString
+               value = "pokemon[pickingPokemon].gen">
+            </PersistentString>
+            <PersistentString
+               value = "pokemon.last">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeScreen.viewDidLoad() -&gt; ():HomeScreen.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "highScore">
+            </PersistentString>
+            <PersistentString
+               value = "scoreValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameScreen.timerAction() -&gt; ():GameScreen.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.circleProgressView.progress">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DataManager.listAllPokemon() -&gt; [ModelPokemon]:DataManager.swift">
          <PersistentStrings>
             <PersistentString
@@ -15,21 +54,13 @@
                value = "pokemon.count">
             </PersistentString>
             <PersistentString
+               value = "pokemon2">
+            </PersistentString>
+            <PersistentString
                value = "pokemon2.id">
             </PersistentString>
             <PersistentString
                value = "pokemon[2].id">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GameScreen.setUp() -&gt; ():GameScreen.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "pickingPokemon">
-            </PersistentString>
-            <PersistentString
-               value = "pokemon[pickingPokemon].gen">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -770,6 +770,8 @@
 		8491A2961DE1A31100D055FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8491A2901DE1A31100D055FE /* Info.plist */; };
 		8491A29C1DE1A55500D055FE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491A29B1DE1A55500D055FE /* DataManager.swift */; };
 		8491A29E1DE1A67900D055FE /* ModelPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491A29D1DE1A67900D055FE /* ModelPokemon.swift */; };
+		84931CF21DE34D2300D3096A /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931CF11DE34D2300D3096A /* model.swift */; };
+		84931CF41DE3608200D3096A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931CF31DE3608200D3096A /* Extension.swift */; };
 		84B986331DDEFF630019D197 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B986321DDEFF630019D197 /* CircleProgressView.swift */; };
 /* End PBXBuildFile section */
 
@@ -1546,6 +1548,8 @@
 		8491A2901DE1A31100D055FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8491A29B1DE1A55500D055FE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8491A29D1DE1A67900D055FE /* ModelPokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPokemon.swift; sourceTree = "<group>"; };
+		84931CF11DE34D2300D3096A /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		84931CF31DE3608200D3096A /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		84B986321DDEFF630019D197 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1582,18 +1586,20 @@
 		84046AF81DDDE96E00E09011 /* Lab1 */ = {
 			isa = PBXGroup;
 			children = (
+				84931CF01DE34D1200D3096A /* Model */,
 				8417A9721DE1A0E600B993C8 /* DataHolder */,
 				8417A3891DE18C8E00B993C8 /* images */,
-				84B986321DDEFF630019D197 /* CircleProgressView.swift */,
 				84222EBB1DDEAE8800C3AE42 /* Screen */,
+				84B986321DDEFF630019D197 /* CircleProgressView.swift */,
 				84046AF91DDDE96E00E09011 /* AppDelegate.swift */,
 				84046AFB1DDDE96E00E09011 /* ViewController.swift */,
 				84046AFD1DDDE96E00E09011 /* Main.storyboard */,
 				84046B001DDDE96E00E09011 /* Assets.xcassets */,
 				84046B021DDDE96E00E09011 /* LaunchScreen.storyboard */,
 				84046B051DDDE96E00E09011 /* Info.plist */,
-				84046B0B1DDDF4CC00E09011 /* Fonts */,
+				84931CF31DE3608200D3096A /* Extension.swift */,
 				8491A2811DE1A2CA00D055FE /* Lab1-Bridging-Header.h */,
+				84046B0B1DDDF4CC00E09011 /* Fonts */,
 			);
 			path = Lab1;
 			sourceTree = "<group>";
@@ -2403,6 +2409,14 @@
 				8491A2901DE1A31100D055FE /* Info.plist */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		84931CF01DE34D1200D3096A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84931CF11DE34D2300D3096A /* model.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3225,11 +3239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84931CF41DE3608200D3096A /* Extension.swift in Sources */,
 				8417A3871DE18A5600B993C8 /* SettingScreen.swift in Sources */,
 				8491A29C1DE1A55500D055FE /* DataManager.swift in Sources */,
 				84046AFC1DDDE96E00E09011 /* ViewController.swift in Sources */,
 				84222EBD1DDEAF5B00C3AE42 /* GameScreen.swift in Sources */,
 				84B986331DDEFF630019D197 /* CircleProgressView.swift in Sources */,
+				84931CF21DE34D2300D3096A /* model.swift in Sources */,
 				8491A2921DE1A31100D055FE /* FMDatabaseAdditions.m in Sources */,
 				8491A2951DE1A31100D055FE /* FMResultSet.m in Sources */,
 				8491A29E1DE1A67900D055FE /* ModelPokemon.swift in Sources */,

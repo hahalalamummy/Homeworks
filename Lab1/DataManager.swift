@@ -12,7 +12,7 @@ let kDatabaseName = "pokemon"
 let kDatabaseExtension = "db"
 
 class DataManager: NSObject {
-    var pokemon: [ModelPokemon] = []
+    var pokemon: [ModelPokemon] = [ModelPokemon]()
     
     static let shared: DataManager = DataManager()
     
@@ -49,12 +49,12 @@ class DataManager: NSObject {
         
         let select = "SELECT * FROM pokemon"
         
-        var pokemon2 = ModelPokemon()
-        pokemon.append(pokemon2)
+        
+        //pokemon.append(pokemon2)
         do{
             let result = try database?.executeQuery(select, values: nil)
             while (result?.next())! {
-                
+                let pokemon2 = ModelPokemon()
 //                print(result?.int(forColumn: "StudentID"))
 //                print(result?.string(forColumn: "Name"))
 //                print(result?.int(forColumn: "Age"))
