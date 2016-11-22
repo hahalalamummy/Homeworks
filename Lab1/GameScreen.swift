@@ -101,8 +101,10 @@ class GameScreen: UIViewController {
         self.pokemonImage.image = self.pokemonImage.image?.withRenderingMode(.alwaysOriginal)
         pokemonInformation.alpha = 1
         
-        
         timer.invalidate()
+        UIView.transition(with: pokemonImage, duration: 0.1, options: .transitionFlipFromRight, animations: {
+        })
+        
         nextPokemon()
         
     }
