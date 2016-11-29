@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SongController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:SongController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SongController.viewDidLoad() -&gt; ():SongController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "genreIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TableViewCell.(setupUI(url : String, row : Int) -&gt; ()).(closure #1).(closure #1):TableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageLabel">
+            </PersistentString>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CollectionViewCell.(setupUI(url : String, row : Int) -&gt; ()).(closure #1):CollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CollectionViewCell.setupUI(url : String, row : Int) -&gt; ():CollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+            <PersistentString
+               value = "self.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "cell.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
