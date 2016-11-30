@@ -57,9 +57,8 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         let cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SongController") as! SongController
-//        vc.json = cell.json
-//        vc.url = cell.url
-        vc.genreIndex = genreIndices[indexPath.row]
+        vc.json = cell.json
+        //vc.genreIndex = genreIndices[indexPath.row]
         vc.genreName = cell.labelGenre.text
         vc.genrePicture = cell.imageGenre.image
         
@@ -74,6 +73,4 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
-    
 }

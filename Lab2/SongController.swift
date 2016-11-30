@@ -18,7 +18,7 @@ class SongController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var json: JSON = []
     
-    var genreIndex: Int!
+    //var genreIndex: Int!
     var genreName: String!
     var genrePicture: UIImage!
     
@@ -33,6 +33,16 @@ class SongController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         genreLabel.text = genreName
         genreImage.image = genrePicture
+        
+        self.title = "Discover"
+        self.navigationItem.hidesBackButton = true
+        let tapOutGesture = UITapGestureRecognizer(target: self, action: #selector(popView))
+        self.genreImage.isUserInteractionEnabled = true
+        self.genreImage.addGestureRecognizer(tapOutGesture)
+    }
+    
+    func popView() {
+        navigationController!.popViewController(animated: true)
     }
     
 //    func setupTableView(){
@@ -55,11 +65,11 @@ class SongController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableCell") as! TableViewCell
         //cell.json = self.json
-        let genreUrl = String(format: url, self.genreIndex)
-        cell.setupUI(url: genreUrl, row: indexPath.row)
-        
+        //let genreUrl = String(format: url, self.genreIndex)
+        cell.setupUI(json: self.json, row: indexPath.row)
+        //cell.backgroundColor = UIColor.clear
         return cell
     }
     

@@ -24,46 +24,44 @@ class TableViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        self.songImage.layer.cornerRadius = 22.5
+        self.songImage.layer.cornerRadius = self.songImage.frame.size.width/2
         self.songImage.layer.masksToBounds = true
     }
     
-    func setupUI(url: String, row: Int) {
+    func setupUI(json: JSON, row: Int) {
         
-        DownloadManager.shared.download(url: url) { (json) in
-            let feed = json["feed"]
-            let entry = feed["entry"]
-            let entrySequence = entry[row]
-            
-            let name = entrySequence["im:name"]
-            guard let nameLabel = name["label"].string else {
-                return
-            }
-            
-            let image = entrySequence["im:image"]
-            let image0 = image[0]
-            guard let imageLabel = image0["label"].string else {
-                return
-            }
-            
-            let artist = entrySequence["im:artist"]
-            guard let artistLabel = artist["label"].string else {
-                return
-            }
-            
-            
-            //self.imgURL = imageLabel
-            
-            DownloadManager.shared.downloadImage(url2: imageLabel) { (image) in
-                self.songImage.image = image
-                self.songName.text = nameLabel
-                self.artist.text = artistLabel
-            }
+        let feed = json["feed"]
+        let entry = feed["entry"]
+        let entrySequence = entry[row]
+        
+        let name = entrySequence["im:name"]
+        guard let nameLabel = name["label"].string else {
+            return
+        }
+        
+        let image = entrySequence["im:image"]
+        let image0 = image[0]
+        guard let imageLabel = image0["label"].string else {
+            return
+        }
+        
+        let artist = entrySequence["im:artist"]
+        guard let artistLabel = artist["label"].string else {
+            return
+        }
+        
+        
+        //self.imgURL = imageLabel
+        
+        DownloadManager.shared.downloadImage(url2: imageLabel) { (image) in
+            self.songImage.image = image
+            self.songName.text = nameLabel
+            self.artist.text = artistLabel
         }
         
 //        Alamofire.request(imgURL).responseImage { response in
 //            debugPrint(response)
-//            
+//
 //            print(response.request)
 //            print(response.response)
 //            debugPrint(response.result)
