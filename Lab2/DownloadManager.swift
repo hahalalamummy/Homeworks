@@ -33,8 +33,7 @@ class DownloadManager {
     }
     
     func downloadImage(url2: String, completed: @escaping(_ image: UIImage) -> Void) {
-        print(url2)
-        Alamofire.request("http://is2.mzstatic.com/image/thumb/Music/b5/d8/3b/mzi.kkyhfzmk.jpg/55x55bb-85.jpg").responseImage { (response) in
+        Alamofire.request(url2).responseImage { (response) in
             
             if let image = response.result.value {
                 print(image)

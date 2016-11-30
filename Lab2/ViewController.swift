@@ -54,24 +54,26 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath as IndexPath) as! CollectionViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SongController") as! SongController
 //        vc.json = cell.json
 //        vc.url = cell.url
         vc.genreIndex = genreIndices[indexPath.row]
         vc.genreName = cell.labelGenre.text
+        vc.genrePicture = cell.imageGenre.image
         
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: (self.view.frame.width - 30) / 2, height: self.view.frame.height / 3 )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    
 }
-
-//extension ViewController: UICollectionViewDelegateFlowLayout  {
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        
-//        return CGSize(width: (self.view.frame.width - 30) / 2, height: self.view.frame.height / 3 )
-//    }
-//    
-//}

@@ -17,13 +17,19 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var artist: UILabel!
     
 //    var json: JSON = []
+    var imgURL: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    override func layoutSubviews() {
+        self.songImage.layer.cornerRadius = 22.5
+        self.songImage.layer.masksToBounds = true
+    }
+    
     func setupUI(url: String, row: Int) {
-        var imgURL: String = ""
+        
         DownloadManager.shared.download(url: url) { (json) in
             let feed = json["feed"]
             let entry = feed["entry"]
@@ -45,11 +51,13 @@ class TableViewCell: UITableViewCell {
                 return
             }
             
-            self.songName.text = nameLabel
-            self.artist.text = artistLabel
+            
+            //self.imgURL = imageLabel
             
             DownloadManager.shared.downloadImage(url2: imageLabel) { (image) in
                 self.songImage.image = image
+                self.songName.text = nameLabel
+                self.artist.text = artistLabel
             }
         }
         

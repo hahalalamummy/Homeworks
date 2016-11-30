@@ -20,8 +20,10 @@ class SongController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var genreIndex: Int!
     var genreName: String!
+    var genrePicture: UIImage!
     
-    //var listSongs: Variable<[Song]> = Variable<[Song]>([])
+    @IBOutlet weak var genreImage: UIImageView!
+    @IBOutlet weak var genreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,8 @@ class SongController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        
+        genreLabel.text = genreName
+        genreImage.image = genrePicture
     }
     
 //    func setupTableView(){
