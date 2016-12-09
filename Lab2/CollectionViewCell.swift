@@ -7,34 +7,33 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class CollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageGenre: UIImageView!
+    
     @IBOutlet weak var labelGenre: UILabel!
     
-    var json: JSON = []
-    var url: String = ""
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.labelGenre.isHidden = true
     }
     
     func setupUI(url: String, row: Int) {
-        DownloadManager.shared.download(url: url) { (json) in
-            
-            let feed = json["feed"]
-            let title = feed["title"]
-            guard let label = title["label"].string else {
-                return
-            }
-            let genreName = label.replacingOccurrences(of: "iTunes Store: Top Songs in " , with: "")
-            
-            self.labelGenre.text = genreName
+        
+        self.isUserInteractionEnabled = false
+        self.activityIndicator.startAnimating()
+        DownloadManager.shared.downloadGenre(url: url) { (title) in
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            self.labelGenre.isHidden = false
+            self.labelGenre.text = title
             self.imageGenre.image = UIImage(named: "genre-\(row)")
-            self.url = url
-            self.json = json
             print("genre-\(row)")
+            self.isUserInteractionEnabled = true
         }
     }
 }

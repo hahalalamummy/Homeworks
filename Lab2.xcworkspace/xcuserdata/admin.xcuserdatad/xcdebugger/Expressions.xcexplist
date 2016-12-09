@@ -3,28 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "SongController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:SongController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "url">
-            </PersistentString>
-            <PersistentString
-               value = "indexPath.row">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "TableViewCell.(setupUI(url : String, row : Int) -&gt; ()).(closure #1).(closure #1):TableViewCell.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "imageLabel">
-            </PersistentString>
-            <PersistentString
-               value = "response.result.value">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "ViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -39,10 +17,69 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "AudioPlayer.actionPlayPause() -&gt; ():AudioPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.playing">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CollectionViewCell.(setupUI(url : String, row : Int) -&gt; ()).(closure #1):CollectionViewCell.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SongController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:SongController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AudioPlayer.actionPreviousSong() -&gt; ():AudioPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "songPosition">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SongController.tableView(UITableView, didDeselectRowAt : IndexPath) -&gt; ():SongController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SongController.tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ():SongController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CollectionViewCell.setupUI(url : String, row : Int) -&gt; ():CollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+            <PersistentString
+               value = "self.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SongController.(tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell).(closure #1):SongController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.song">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -58,13 +95,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CollectionViewCell.setupUI(url : String, row : Int) -&gt; ():CollectionViewCell.swift">
+         contextName = "TableViewCell.(setupUI(url : String, row : Int) -&gt; ()).(closure #1).(closure #1):TableViewCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "url">
+               value = "imageLabel">
             </PersistentString>
             <PersistentString
-               value = "self.url">
+               value = "response.result.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TableViewCell.(setupUI(json : JSON, row : Int, completed : (Bool) -&gt; ()) -&gt; ()).(closure #1):TableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

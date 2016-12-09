@@ -14,9 +14,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    var havingPlayBar: Bool = false
+    
+    var playbarView: PlaybarView!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
         return true
+    }
+    
+    func addPlaybarView(animationFrame: CGRect) {
+        playbarView = Bundle.main.loadNibNamed("PlaybarView", owner: nil, options: nil)?.first as! PlaybarView
+        
+        let rootView = self.window?.rootViewController?.view
+        
+        playbarView.translatesAutoresizingMaskIntoConstraints = false
+        
+        rootView?.addSubview(playbarView)
+        
+        playbarView.frame = animationFrame
+        
+        let distanceToBottom = (rootView?.frame.height)! - animationFrame.origin.y - animationFrame.height
+        
+        
+        let horizontalConstraint = NSLayoutConstraint(item: playbarView, attribute: .centerX, relatedBy: .equal, toItem: rootView, attribute: .centerX, multiplier: 1.0, constant: 0)
+        let bottomConstraint = NSLayoutConstraint(item: playbarView, attribute: .bottom, relatedBy: .equal, toItem: rootView, attribute: .bottom, multiplier: 1.0, constant: -distanceToBottom)
+        let heightConstraint =  playbarView.heightAnchor.constraint(equalToConstant: 50)
+        let widthConstraint = playbarView.widthAnchor.constraint(equalToConstant: (rootView?.frame.width)!)
+        
+        rootView?.addConstraints([horizontalConstraint, bottomConstraint, heightConstraint, widthConstraint])
+        
+        rootView?.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 1) {
+            bottomConstraint.constant = 0
+            rootView?.layoutIfNeeded()
+        }
+        
+        AudioPlayer.shared.setupCommandCener()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -1,75 +1,47 @@
-//
-//  TableViewCell.swift
-//  Lab2
-//
-//  Created by Admin on 11/27/16.
-//  Copyright © 2016 Admin. All rights reserved.
-//
-
 import UIKit
-import SwiftyJSON
-import Alamofire
-//import AlamofireImage
 
 class TableViewCell: UITableViewCell {
-    @IBOutlet weak var songImage: UIImageView!
-    @IBOutlet weak var songName: UILabel!
-    @IBOutlet weak var artist: UILabel!
     
-//    var json: JSON = []
-    var imgURL: String = ""
+    @IBOutlet weak var imageSong: UIImageView!
+    
+    @IBOutlet weak var labelSong: UILabel!
+    
+    @IBOutlet weak var labelArtist: UILabel!
+    
+    @IBOutlet weak var imageChosen: UIImageView!
+    
+    var song: Song!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.selectionStyle = .none
+        
     }
     
-    override func layoutSubviews() {
-        self.songImage.layer.cornerRadius = self.songImage.frame.size.width/2
-        self.songImage.layer.masksToBounds = true
+    func setupUI(song: Song) {
+        
+        DownloadManager.shared.downloadImage(url: song.imageUrl) { (image) in
+            self.labelSong.text = song.name
+            self.labelArtist.text = song.artist
+            self.imageSong.image = image
+            self.imageSong.layer.cornerRadius = self.imageSong.frame.width / 2
+            self.imageSong.layer.masksToBounds = true
+            
+            song.image = image
+            
+            self.song = song
+            if song.isChosen == false {
+                self.imageChosen.isHidden = true
+            } else {
+                self.imageChosen.isHidden = false
+            }
+        }
     }
     
-    func setupUI(json: JSON, row: Int) {
-        
-        let feed = json["feed"]
-        let entry = feed["entry"]
-        let entrySequence = entry[row]
-        
-        let name = entrySequence["im:name"]
-        guard let nameLabel = name["label"].string else {
-            return
-        }
-        
-        let image = entrySequence["im:image"]
-        let image0 = image[0]
-        guard let imageLabel = image0["label"].string else {
-            return
-        }
-        
-        let artist = entrySequence["im:artist"]
-        guard let artistLabel = artist["label"].string else {
-            return
-        }
-        
-        
-        //self.imgURL = imageLabel
-        
-        DownloadManager.shared.downloadImage(url2: imageLabel) { (image) in
-            self.songImage.image = image
-            self.songName.text = nameLabel
-            self.artist.text = artistLabel
-        }
-        
-//        Alamofire.request(imgURL).responseImage { response in
-//            debugPrint(response)
-//
-//            print(response.request)
-//            print(response.response)
-//            debugPrint(response.result)
-//            
-//            if let image = response.result.value {
-//                print("image downloaded: \(image)")
-//                self.songImage.image = image
-//            }
-//        }
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//        
+//    }
+    
 }
